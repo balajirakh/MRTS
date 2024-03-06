@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "app1.messages.saveSuccess",
+    "type": "java.lang.String",
+    "description": "A description for 'app1.messages.saveSuccess'"
+  },
+  {
+    "name": "app1.messages.savefail",
+    "type": "java.lang.String",
+    "description": "A description for 'app1.messages.savefail'"
+  }
+]}
