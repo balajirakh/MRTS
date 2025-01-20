@@ -16,6 +16,8 @@ public interface CustomerServiseI {
 	
 	public List<Customer> getAllCustomer();
 	
+
+	
 	
 	
 	

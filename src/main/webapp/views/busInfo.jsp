@@ -10,6 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
 body {
+ 
 	background-image:
 		url('http://msrtc.maharashtra.gov.in/MSRTCDOCS/BannerDocs//Banner326645c0-bda1-4efb-998f-f12c7393db45_1772023.jpg');
 	background-size: cover;
@@ -19,11 +20,13 @@ body {
 </head>
 <body bgcolor="white">
 
-
+ 
 	<marquee>
 
 		<h1>MRTS Login</h1>
 	</marquee>
+	
+	 
 	<font color="green" size="30px">${SUCCESS} </font>
 	<font color="red">${FAIL} </font>
 

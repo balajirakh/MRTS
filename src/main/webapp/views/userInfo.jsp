@@ -64,7 +64,7 @@ body {
 
 		</table>
 		<div align="center">
-			<a href=getallcustomers><h2>View All customers</h2></a>
+			<a href=getallcustomers><h2> View All customers</h2></a>
 		</div>
 	</form:form>
 

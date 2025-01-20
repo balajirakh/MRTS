@@ -1,8 +1,9 @@
-package com.BikkatIT.MassRapidTransistSystem.Service;
+package com.BikkatIT.MassRapidTransistSystem.ServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.BikkatIT.MassRapidTransistSystem.Service.BusService;
 import com.BikkatIT.MassRapidTransistSystem.entity.Bus;
 import com.BikkatIT.MassRapidTransistSystem.repository.BusRepo;
 

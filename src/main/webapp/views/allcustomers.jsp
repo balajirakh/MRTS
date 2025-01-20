@@ -8,6 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>View All Customers</title>
 </head>
+
  <style>
         table {
             width: 80%;

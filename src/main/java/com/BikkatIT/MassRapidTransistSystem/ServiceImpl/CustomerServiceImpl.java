@@ -1,10 +1,11 @@
-package com.BikkatIT.MassRapidTransistSystem.Service;
+package com.BikkatIT.MassRapidTransistSystem.ServiceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.BikkatIT.MassRapidTransistSystem.Service.CustomerServiseI;
 import com.BikkatIT.MassRapidTransistSystem.entity.Customer;
 import com.BikkatIT.MassRapidTransistSystem.repository.CustomerRepo;
 

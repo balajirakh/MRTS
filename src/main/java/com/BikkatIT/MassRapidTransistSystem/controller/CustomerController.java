@@ -8,10 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.BikkatIT.MassRapidTransistSystem.Service.CustomerServiseI;
+import com.BikkatIT.MassRapidTransistSystem.Service.EmailService;
 import com.BikkatIT.MassRapidTransistSystem.entity.Customer;
 import com.BikkatIT.MassRapidTransistSystem.property.AppProperty;
 
@@ -23,7 +25,11 @@ public class CustomerController {
 
 	@Autowired
 	private AppProperty appProperty;
-	@GetMapping("/login")
+	
+	 @Autowired
+	 private EmailService emailService;
+	
+	@GetMapping("/login" )
 	public String loadUserForm1(Model model) {
 
 		Customer customer = new Customer();
@@ -47,10 +53,12 @@ public class CustomerController {
 	}
 
 	@PostMapping("/savecustomer")
-	public String saveUser(Customer customer, Model model) {
+	public String saveCustomer(Customer customer, Model model) {
 
 		boolean saveCustomer = customerServiseI.saveCustomer(customer);
 
+		
+		
 		Map<String, String> messages = appProperty.getMessages();
 
 		if (saveCustomer) {
@@ -65,6 +73,21 @@ public class CustomerController {
 		return "userInfo";
 
 		}
+	
+	 @PostMapping("/api/register")
+	    public String registerCustomer(@RequestBody Customer customer) {
+	        // Save customer data to the database
+	        // Here you would typically call your repository to save the customer
+	        
+	        // Send OTP to the registered email
+	        emailService.sendOTP(customer);
+	        
+	        return "Customer registered successfully!";
+	    }
+	
+	
+	
+	
 	@GetMapping("/getallcustomers")
 	public String getAllcustomers(Model model){
 		
