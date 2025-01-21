@@ -8,6 +8,7 @@ public class MassRapidTransistSystemApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MassRapidTransistSystemApplication.class, args);
+		System.out.println("welcome in my app");
 	}
 
 }
